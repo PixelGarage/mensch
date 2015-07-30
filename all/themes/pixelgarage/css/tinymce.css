@@ -1,0 +1,50 @@
+/*
+ *  tinymce styles
+ * --------------------------------------------------*/
+.kf-normal {
+  margin: 0 auto;
+  max-width: 620px;
+  font-family: 'dinregularalternate', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1.1px;
+  text-align: center;
+  color: #7a968c;
+}
+@media screen and (min-width: 768px) {
+  .kf-normal {
+    font-size: 22px;
+  }
+}
+.kf-style1 {
+  font-family: 'dinregularalternate', "Arial Black", sans-serif;
+  font-size: 6.5vw;
+  letter-spacing: 1.4px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #293430;
+}
+@media screen and (min-width: 768px) {
+  .kf-style1 {
+    font-size: 50px;
+  }
+}
+.kf-style2 {
+  margin: 0 auto;
+  padding-bottom: 20px;
+  max-width: 620px;
+  font-family: 'dinregularalternate', sans-serif;
+  font-size: 4.8vw;
+  letter-spacing: 1.1px;
+  text-align: center;
+  color: #293430;
+}
+@media screen and (min-width: 480px) {
+  .kf-style2 {
+    font-size: 5.5vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .kf-style2 {
+    font-size: 42px;
+  }
+}

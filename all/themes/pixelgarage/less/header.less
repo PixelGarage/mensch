@@ -1,0 +1,208 @@
+/*
+ *  Header section (navigation)
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+@pxl-navbar-header-width: 750px;
+
+@header-media:  ~"screen and (min-width: @{pxl-navbar-header-width})";
+
+// Mixins
+// -------------------------
+
+
+
+// Main settings
+// -------------------------
+body.navbar-is-fixed-top {
+  padding-top: 140px !important;
+
+  &.admin-menu {
+    padding-top: 140px !important;
+  }
+
+  @media @narrow {
+    padding-top: 140px !important;
+
+    &.admin-menu {
+      padding-top: 140px !important;
+    }
+  }
+  @media @header-media {
+    padding-top: 140px !important;
+
+    &.admin-menu {
+      padding-top: 140px !important;
+    }
+  }
+}
+
+
+header#navbar {
+  margin-bottom: 0;
+  border-bottom: none;
+  background: transparent none;
+
+  .container {
+    padding: 0px @grid-gutter-width/2 10px;
+
+    .region-navigation {
+      font-family: @pxl-text-font;
+      font-size: @font-size-small;
+      text-transform: uppercase;
+      text-align: right;
+      line-height: 1;
+      margin-bottom: 5px;
+
+      #block-locale-language,
+      #block-menu-menu-meta-menu {
+        display: inline-block;
+
+        ul {
+          #pxl-mixins.no-list-style;
+
+          li {
+            display: inline-block;
+            #pxl-mixins.no-list-style;
+
+            a {
+              padding: 5px;
+              outline: none;
+
+              &:hover, &.active {
+                outline: none;
+                background: none;
+              }
+            }
+          }
+        }
+      }
+      #block-locale-language {
+        a {
+          &:hover, &.active {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .navbar-header {
+      display: block;
+      float: none;
+      margin: 0 auto;
+      max-width: @pxl-navbar-header-width;
+
+      p.lead {
+        // slogan
+        margin: 20px auto;
+        padding: 0;
+        width: 90%;
+        font-family: @pxl-text-font-medium;
+        font-size: 3.5vw;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+
+        @media @header-media {
+          font-size: 22px;
+        }
+      }
+
+      a.navbar-brand {
+        // title
+        display: block;
+        float: none;
+        margin: 0 auto;
+        padding: 0;
+        height: auto;
+        font-family: @pxl-text-font-black;
+        font-size: 13vw;
+        text-align: center;
+        text-transform: uppercase;
+        color: @text-color-black;
+        letter-spacing: -3px;
+        line-height: 1;
+        outline: none;
+
+        @media @header-media {
+          font-size: 64px;
+        }
+      }
+
+      .navbar-toggle {
+        // navbar toggle with burger
+        padding: 5px 10px;
+      }
+    }
+
+    // collapse part
+    .navbar-collapse {
+      margin: 0 auto 10px;
+      max-width: @pxl-navbar-header-width - @grid-gutter-width;
+
+      nav {
+        ul.navbar-nav {
+          float: none;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          text-align: justify;
+          line-height: 0;
+
+          &:after {
+            // used for justification:
+            // last line is never justified, so we have to insert a dummy one
+            content: '';
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            height: 0;
+            line-height: 0;
+          }
+
+          li {
+            display: inline-block;
+            float: none;
+            margin: 0 -2px;
+            padding: 0;
+
+            a {
+              margin-bottom: 0.15em;
+              padding: 0;
+              font-family: @pxl-text-font-bold;
+              font-size: 4.7vw;
+              text-transform: uppercase;
+              text-align: center;
+              color: @text-color-black;
+              line-height: 1;
+              outline: none;
+              border-bottom: 0.15em solid @text-color-black;
+
+              @media @header-media {
+                font-size: 28px;
+              }
+
+              &#menu-about {
+                text-align: left;
+              }
+
+              &#menu-submit {
+                text-align: right;
+              }
+
+              &:hover, &.active {
+                margin-bottom: 0;
+                text-decoration: none;
+                outline: none;
+                border: none;
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+

@@ -1,0 +1,111 @@
+/*
+ *  KFArtwork content type
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+
+// Main settings
+// -------------------------
+.node-kfartwork {
+  .row {
+    margin-bottom: 30px;
+
+    @media @tablet {
+      margin-bottom: 50px;
+    }
+
+    .col-sm-12 {
+      text-align: center;
+
+      .field-name-field-images {
+        margin-bottom: 10px;
+
+        .carousel {
+          .carousel-inner {
+            .item {
+              &.active {
+
+              }
+
+              img {
+                width: 100%;
+              }
+            }
+          }
+
+          .carousel-control {
+            background: none;
+
+            &.left {
+              top: 42.5%;
+              margin: 0 0 0 5%;
+              height: 15%;
+              background: transparent url(../images/slider_left.png) top left / contain no-repeat;
+            }
+            &.right {
+              top: 42.5%;
+              margin: 0 5% 0 0;
+              height: 15%;
+              background: transparent url(../images/slider_right.png) top right / contain no-repeat;
+            }
+
+            span.glyphicon {
+              display: none;
+            }
+          }
+        }
+      }
+
+      .field-name-title {
+        display: inline-block;
+        font-family: BrandonGrotesque-Bold, "Arial", sans-serif;
+        font-size: 11px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: @text-color-black;
+        letter-spacing: 1.2px;
+
+        @media @tablet {
+          font-size: 18px;
+        }
+      }
+
+      .field-name-field-artist-name {
+        display: inline-block;
+        margin-left: 5px;
+        font-family: 'Droid Serif', serif;
+        font-size: 11px;
+        color: @text-color;
+
+        @media @tablet {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+// special case of inspiration
+.view .views-row-3 {
+  .node-kfartwork {
+    .row {
+      .col-sm-12 {
+        .field-name-field-artist-name {
+          font-size: 8px;
+
+          @media @tablet {
+            font-size: @font-size-smaller;
+          }
+        }
+
+      }
+    }
+  }
+}

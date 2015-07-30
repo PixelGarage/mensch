@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'ufonts_com_dinregularalternate';
+    src: url('fonts/ufonts_com_dinregularalternate.eot');
+    src: url('fonts/ufonts_com_dinregularalternate.eot') format('embedded-opentype'),
+         url('fonts/ufonts_com_dinregularalternate.woff2') format('woff2'),
+         url('fonts/ufonts_com_dinregularalternate.woff') format('woff'),
+         url('fonts/ufonts_com_dinregularalternate.ttf') format('truetype'),
+         url('fonts/ufonts_com_dinregularalternate.svg#ufonts_com_dinregularalternate') format('svg');
+}

@@ -1,0 +1,65 @@
+/*
+ *  tinymce styles
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+@text-color: darken(#b3c3bd, 20%);
+@text-color-title: darken(#b3c3bd, 55%);
+
+@kf-sm-width: 550px;
+@kf-md-width: 620px;
+@kf-max-width: 650px;
+
+@narrow:  ~"screen and (min-width: 480px)";
+@tablet:  ~"screen and (min-width: 768px)";
+
+// Mixins
+// -------------------------
+
+
+
+// Main settings
+// -------------------------
+.kf-normal {
+  margin: 0 auto;
+  max-width: @kf-md-width;
+  font-family: 'dinregularalternate', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1.1px;
+  text-align: center;
+  color: @text-color;
+
+  @media @tablet {
+    font-size: 22px;
+  }
+}
+.kf-style1 {
+  font-family: 'dinregularalternate', "Arial Black", sans-serif;
+  font-size: 6.5vw;
+  letter-spacing: 1.4px;
+  text-align: center;
+  text-transform: uppercase;
+  color: @text-color-title;
+
+  @media @tablet {
+    font-size: 50px;
+  }
+}
+.kf-style2 {
+  margin: 0 auto;
+  padding-bottom: 20px;
+  max-width: @kf-md-width;
+  font-family: 'dinregularalternate', sans-serif;
+  font-size: 4.8vw;
+  letter-spacing: 1.1px;
+  text-align: center;
+  color: @text-color-title;
+
+  @media @narrow {
+    font-size: 5.5vw;
+  }
+  @media @tablet {
+    font-size: 42px;
+  }
+}

@@ -1,0 +1,304 @@
+/*
+ *  KFPage content type
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+@webform-max-width: 80%;
+
+
+// Mixins
+// -------------------------
+.wysiwyg-body() {
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 10px;
+    font-family: 'dinregularalternate', "Arial Black", sans-serif;
+    font-size: 3vw;
+    letter-spacing: 1.2px;
+    text-align: center;
+    text-transform: uppercase;
+    color: @text-color;
+
+    @media @tablet {
+      font-size: 21px;
+    }
+  }
+
+  p {
+    margin-bottom: 10px;
+
+    @media @tablet {
+      margin-bottom: 20px;
+    }
+  }
+
+  a {
+    //text-decoration: underline;
+    border-bottom: 1px solid @text-color;
+
+    &:hover, &.active {
+      text-decoration: none;
+      border-bottom: none;
+    }
+  }
+
+  tbody td {
+    font-family: @pxl-text-font;
+    font-size: @font-size-base;
+  }
+
+  pre, address {
+    font-family: @pxl-text-font-light;
+    font-size: @font-size-base;
+  }
+
+  hr {
+    border: 0;
+    border-bottom: 2px solid @text-color;
+    background: none;
+  }
+
+  img, embed, video, audio, iframe {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.form-label() {
+  width: auto;
+  font-family: BrandonGrotesque-Black, "Arial Black", sans-serif;
+  font-size: 2.6vw;
+  letter-spacing: 1.2px;
+  text-align: left;
+  text-transform: uppercase;
+  color: @text-color;
+
+  @media @tablet {
+    font-size: 21px;
+  }
+}
+
+.form-button(@fsize: 3vw; @max-fsize: 21px) {
+  padding: 1.3em 1em;
+  font-family: BrandonGrotesque-Black, "Arial Black", sans-serif;
+  font-size: @fsize;
+  letter-spacing: 1.2px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  background-color: @text-color;
+
+  @media @tablet {
+    font-size: @max-fsize;
+  }
+
+  &:hover {
+    background-color: lighten(@text-color, 15%);
+  }
+
+}
+
+
+// Main settings
+// -------------------------
+.node-kfpage {
+  margin-bottom: 50px;
+  .row {
+    .col-sm-12 {
+      // background image placement
+      &.bg-image-topleft {
+        background: no-repeat left top / 25% auto;
+      }
+      &.bg-image-topcenter {
+        background: no-repeat center top / 25% auto;
+      }
+      &.bg-image-topright {
+        background: no-repeat right top / 25% auto;
+      }
+      &.bg-image-centerleft {
+        background: no-repeat left center / 25% auto;
+      }
+      &.bg-image-center {
+        background: no-repeat center center / 25% auto;
+      }
+      &.bg-image-centerright {
+        background: no-repeat right center / 25% auto;
+      }
+      &.bg-image-bottomleft {
+        background: no-repeat left bottom / 25% auto;
+      }
+      &.bg-image-bottomcenter {
+        background: no-repeat center bottom / 25% auto;
+      }
+      &.bg-image-bottomright {
+        background: no-repeat right bottom / 25% auto;
+      }
+      &.bg-image-full {
+        background: no-repeat left top / cover;
+      }
+      div.bg-image-webform {
+        background: no-repeat left top / cover;
+      }
+
+
+      .field-name-body .field-item,
+      .field-name-field-text .field-item {
+        .wysiwyg-body();
+      }
+
+      .webform-client-form {
+        margin-bottom: 20px;
+        padding: 90px 0 30px;
+        width: 100%;
+
+        .webform-component {
+          /* webform component */
+          overflow: hidden;
+          margin: 0 auto 30px;
+          padding: 15px 25px;
+          max-width: @webform-max-width;
+          background-color: #fff;
+
+          &.webform-container-inline {
+            position: relative;
+
+            label, input {
+              display: inline-block;
+            }
+
+            input.form-text {
+              position: absolute;
+              right: 20px;
+              width: 40%;
+
+              @media @narrow {
+                width: 50%;
+              }
+            }
+          }
+
+          div.description {
+            display: inline-block;
+          }
+
+          label {
+            .form-label;
+          }
+
+          input, textarea {
+            overflow: hidden;
+            font-family: 'Droid Serif', serif;
+            font-size: 2.3vw;
+            letter-spacing: 1.1px;
+            text-align: left;
+            color: @text-color;
+            border-radius: 0;
+            box-shadow: none;
+            border: none;
+            border-bottom: 1px solid @text-color;
+
+            @media @tablet {
+              font-size: 18px;
+            }
+          }
+
+          .form-textarea-wrapper {
+            div.grippie {
+              display: none;
+            }
+          }
+
+        }
+
+        [id$=ajax-wrapper] {
+          /* multi-file upload container */
+          overflow: auto;
+          margin: 0 auto 30px;
+          max-width: @webform-max-width;
+          background-color: #fff;
+
+          fieldset {
+            min-width: 350px;
+            padding: 15px 25px;
+            border: none;
+
+            .panel-heading{
+              padding: 0;
+              border: none;
+              background-color: transparent;
+
+              .panel-title {
+                .form-label;
+              }
+            }
+
+            .panel-body {
+              padding: 0;
+
+              .table-responsive {
+                table {
+                  tbody {
+                    button {
+                      .form-button(2vw, 14px);
+                      padding: 0.8em 1em;
+                    }
+                  }
+                }
+              }
+
+              .webform-component-multiple-file {
+                margin: 0;
+                padding: 0;
+                max-width: 100%;
+
+                label {
+                  font-size: 2vw;
+
+                  @media @tablet {
+                    font-size: 16px;
+                  }
+                }
+
+                .form-managed-file {
+                  input {
+                    position: relative;
+                    float: none;
+                    text-align: left;
+                    width: 70%;
+
+                    @media @tablet {
+                      width: 74%;
+                    }
+                  }
+
+                  span.input-group-btn {
+                    display: inline-block;
+                    margin-left: 1%;
+
+                    button {
+                      .form-button();
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        div.form-actions {
+          /* form buttons */
+          margin: 0 auto 30px;
+          max-width: @webform-max-width;
+
+          button {
+            .form-button();
+          }
+        }
+      }
+    }
+  }
+}

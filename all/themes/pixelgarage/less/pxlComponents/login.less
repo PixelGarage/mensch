@@ -1,0 +1,196 @@
+/*
+ *  Login form component
+ *  (see inc/login.inc for login form alteration)
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+@pxl-login-blue: #2698f2;
+@pxl-login-dark-blue: darken(@pxl-login-blue, 20%);
+@pxl-login-red: #a70014;
+@pxl-login-dark-red: darken(@pxl-login-red, 20%);
+
+
+// Mixins
+// -------------------------
+.reset-form() {
+  clear: both;
+  float: none;
+  width: auto;
+}
+
+// General settings
+// -------------------------
+#user_register_form,
+#user_login_form,
+#user-create-account,
+#user_pass_form {
+  .reset-form;
+}
+
+.page-user-login {
+  .btn {
+    padding: 1.3em 1em;
+    font-family: BrandonGrotesque-Black, "Arial Black", sans-serif;
+    font-size: 21px;
+    letter-spacing: 1.2px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 0;
+    border: none;
+    background-color: @text-color;
+
+    &:hover {
+      background-color: lighten(@text-color, 15%);
+    }
+  }
+}
+
+/* User login page */
+form#user-login {
+  position: relative;
+  padding: 2em;
+  border: none;
+}
+#user-create-account {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 0 2em;
+  width: 100%;
+
+  .form-actions-wrapper {
+    position: relative;
+    padding: 1em 0 0;
+  }
+
+  .login-register {
+    &:extend(.page-user-login .btn);
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    vertical-align: middle;
+    margin: 0;
+
+    &:hover {
+      &:extend(.page-user-login .btn:hover);
+    }
+  }
+
+  @media screen and (min-width: @screen-md-min) {
+    padding: 2em;
+    width: 50%;
+  }
+}
+#user_login_form {
+  &:extend(#user-create-account);
+  border: 0;
+  border-bottom: 1px solid @hr-border;
+
+  h1 {
+    text-transform: uppercase;
+  }
+
+  .form-actions-wrapper {
+    position: relative;
+    padding: 1em 0 0;
+
+    .form-actions {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      vertical-align: middle;
+      margin: 0;
+    }
+  }
+
+  .btn {
+    padding: 1.3em 1em;
+    font-family: BrandonGrotesque-Black, "Arial Black", sans-serif;
+    font-size: 21px;
+    letter-spacing: 1.2px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 0;
+    border: none;
+    background-color: @text-color;
+
+    &:hover {
+      background-color: lighten(@text-color, 15%);
+    }
+  }
+
+  .login-password {
+    display: inline-block;
+    margin:  0.5em 0;
+    color: @pxl-login-blue;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media screen and (min-width: @screen-md-min) {
+    border: 0;
+    border-right: 1px solid @hr-border;
+  }
+}
+
+
+/* User register / password pages */
+#user-register-form,
+#user-pass {
+  display: inline-block;
+  max-width: 40em;
+  vertical-align: top;
+  margin: 1em 0;
+
+  .form-actions {
+    margin-top: 2em;
+
+    .back-to-login {
+      float: left;
+      margin: 0;
+
+      .login-account {
+        display: inline-block;
+        margin-top:  0.5em;
+        color: @pxl-login-blue;
+
+        &:hover {
+          color: @pxl-login-blue;
+          text-decoration: underline;
+        }
+      }
+
+      &:before {
+        display: inline;
+        font-family: "fontawesome";
+        content: '\f112';
+        color: @pxl-login-blue;
+        text-align: center;
+        padding: 0.3em;
+      }
+    }
+
+    .btn {
+      float: right;
+      padding: 1.3em 1em;
+      font-family: BrandonGrotesque-Black, "Arial Black", sans-serif;
+      font-size: 21px;
+      letter-spacing: 1.2px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #fff;
+      border-radius: 0;
+      border: none;
+      background-color: @text-color;
+
+      &:hover {
+        background-color: lighten(@text-color, 15%);
+      }
+    }
+  }
+}
+

@@ -1,0 +1,52 @@
+/* --------------------------------------------------
+ * Pixelgarage fonts
+ * --------------------------------------------------*/
+//
+//
+// webfont licences
+@import '../fonts/BrandonGrotesque/BrandonGrotesque-Licence.css';
+
+//
+// Google fonts
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+
+//
+// Awesome icon font
+@import '../fonts/font-awesome/less/font-awesome';
+@fa-font-path: '@{pxl-font-path}/font-awesome/fonts'; // override fa font path (lazy loading)
+
+//
+// Define customer specific fonts
+@pxl-font-path: '../fonts';
+@pxl-bs-path: '../bootstrap';
+
+// icon font
+@pxl-icon-font: 'fontawesome';
+
+// title font
+@pxl-title-font: 'dinregularalternate', "Helvetica Neue", sans-serif;
+
+// text fonts
+@pxl-text-font: 'dinregularalternate', "Helvetica Neue", sans-serif;
+@pxl-text-font-serif: 'Droid Serif', serif;
+@pxl-text-font-light: 'dinregularalternate', "Helvetica Neue Light", sans-serif;
+@pxl-text-font-medium: 'dinregularalternate', "Helvetica Neue", sans-serif;
+@pxl-text-font-bold: 'dinregularalternate', "Arial Black", sans-serif;
+@pxl-text-font-black: 'dinregularalternate', "Arial Black", sans-serif;
+
+// form font
+@pxl-form-font: @pxl-text-font;
+
+//
+// font faces
+
+//Mensch Font
+@font-face {
+  font-family: 'dinregularalternate';
+  src: url('@{pxl-font-path}/dinregularalternate/dinregularalternate.eot');
+  src: url('@{pxl-font-path}/dinregularalternate/dinregularalternate.eot') format('embedded-opentype'),
+  url('@{pxl-font-path}/dinregularalternate/dinregularalternate.woff2') format('woff2'),
+  url('@{pxl-font-path}/dinregularalternate/dinregularalternate.woff') format('woff'),
+  url('@{pxl-font-path}/dinregularalternate/dinregularalternate.ttf') format('truetype'),
+  url('@{pxl-font-path}/dinregularalternate/dinregularalternate.svg#dinregularalternate') format('svg');
+}
