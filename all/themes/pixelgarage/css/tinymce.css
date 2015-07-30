@@ -3,7 +3,7 @@
  * --------------------------------------------------*/
 .kf-normal {
   margin: 0 auto;
-  max-width: 620px;
+  max-width: 760px;
   font-family: 'dinregularalternate', sans-serif;
   font-size: 14px;
   letter-spacing: 1.1px;
@@ -31,7 +31,7 @@
 .kf-style2 {
   margin: 0 auto;
   padding-bottom: 20px;
-  max-width: 620px;
+  max-width: 760px;
   font-family: 'dinregularalternate', sans-serif;
   font-size: 4.8vw;
   letter-spacing: 1.1px;
