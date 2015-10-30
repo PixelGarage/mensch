@@ -8790,7 +8790,6 @@ div.features-export-list .form-type-checkbox input[type=checkbox] {
 .node-kfpage .row .col-sm-12 .field-name-field-text .field-item iframe {
   display: block;
   max-width: 100%;
-  height: auto;
 }
 .node-kfpage .row .col-sm-12 .webform-client-form {
   margin-bottom: 20px;
