@@ -278,6 +278,7 @@ function _webform_render_multiple_file($component, $value = NULL, $filter = TRUE
     $elements['#display_field'] = 0;
     $elements['#description'] = $element['#description'];
     $elements['#weight'] = $component['weight'];
+    $elements['#attributes']['class'][] = 'webform-component--' . $component['form_key'];
 
     // Add some properties that will eventually be added to the
     // file upload field.
@@ -294,7 +295,7 @@ function _webform_render_multiple_file($component, $value = NULL, $filter = TRUE
  * @see webform_component_invoke()
  */
 function _webform_submit_multiple_file($component, $value) {
-  return array_filter($value);
+  return isset($value) ? array_filter($value) : NULL;
 }
 
 /**
@@ -315,6 +316,21 @@ function _webform_display_multiple_file($component, $value, $format = 'html') {
         '#webform_component' => $component,
       );
     }
+    $files['#translatable'] = array('title');
+    $files['#weight'] = $component['weight'];
+    $files['#title'] = $component['name'];
+    $files['#theme_wrappers'] = $format == 'text' ? array('webform_element_text') : array('webform_element');
+  }
+  else{
+    $files = array();
+    $files[] = array(
+      '#value' => NULL,
+      '#theme' => 'webform_display_file',
+      '#theme_wrappers' => $format == 'text' ? array('webform_element_text') : array('webform_display_multiple_files_set'),
+      '#format' => $format,
+      '#parents' => NULL,
+      '#webform_component' => $component,
+    );
     $files['#translatable'] = array('title');
     $files['#weight'] = $component['weight'];
     $files['#title'] = $component['name'];

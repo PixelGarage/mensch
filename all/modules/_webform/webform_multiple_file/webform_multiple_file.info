@@ -6,9 +6,9 @@ package = Webform
 dependencies[] = webform (4.x)
 dependencies[] = file
 
-; Information added by Drupal.org packaging script on 2014-05-13
-version = "7.x-1.0-beta3"
+; Information added by Drupal.org packaging script on 2015-09-12
+version = "7.x-1.0-beta4"
 core = "7.x"
 project = "webform_multiple_file"
-datestamp = "1399971828"
+datestamp = "1442065467"
 

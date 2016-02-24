@@ -75,9 +75,11 @@ function webform_multiple_file_webform_submission_presave($node, &$submission) {
     // Also we should keep $submission->file_usage values from previous hook implementations.
     $deleted_fids =  isset($submission->file_usage['deleted_fids']) ? $submission->file_usage['deleted_fids'] : array();
     $added_fids =  isset($submission->file_usage['added_fids']) ? $submission->file_usage['added_fids'] : array();
+    $renameable = isset($submission->file_usage['renameable']) ? $submission->file_usage['renameable'] : array();
     $submission->file_usage = array(
       'deleted_fids' => array_merge($deleted_fids, array_diff($old_fids, $new_fids)),
       'added_fids' =>  array_merge($added_fids, array_diff($new_fids, $old_fids)),
+      'renameable' => $renameable,
     );
   }
 }

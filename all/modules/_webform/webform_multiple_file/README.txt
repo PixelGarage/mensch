@@ -9,14 +9,8 @@ common webform component like validation, export, etc.
 Module depends on Webform and File (core).
 
 -- INSTALLATION --
-Unfortunately at this moment Webform Multiple File requires patch applying
-for Webform module. The patch will change only 2 rows in webform.module
-and will not crash any functionality. See https://drupal.org/patch/apply
-for information about applying patches.
-
-After patch applying you should enable Webform Multiple File
-on the modules administration page.
-Enjoy with new component 'Multiple file' for Webform!
+Just enable module and enjoy with new component 'Multiple file'
+for Webform!
 
 -- CONTACT AND CREDITS --
 Module was developed by Evgeniy Melnikov:
